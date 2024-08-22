@@ -25,6 +25,47 @@
     height: 100%;  /* L'image prend toute la hauteur de son conteneur */
     object-fit: cover;  /* L'image remplit le conteneur tout en conservant son aspect */
 }
+/* Style pour la barre de navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e6045b;
+    padding: 10px 0;
+    z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+/* Espacement pour les sections */
+section {
+    padding: 60px 20px; /* Ajoute un espacement suffisant pour ne pas être couvert par la navbar fixe */
+}
 
 
 .about-section {
@@ -128,6 +169,15 @@
     </style>
 </head>
 <body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="#profile">Profil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+        </ul>
+    </nav>
     <!-- Photo de profil -->
     <section id="profile">
         <div class="profile-container">
@@ -171,16 +221,14 @@
                 <p>
                     Je recherche un contrat d'alternance dans le cadre de mon Bachelor en Développement Web et Applications Mobiles à l'Efrei. Passionnée, organisée et autodidacte, 
                     j'aime apprendre de nouvelles technologies et relever des défis. Motivé et créatif, je suis prête à contribuer à vos projets et à collaborer avec des professionnels du secteur.
+                    
                 </p>
                 <div class="links-container">
                     <a href="https://github.com/Celia-Sadeg" target="_blank" class="portfolio-link">
                         <img src="git.png" alt="GitHub">
                         <span>GitHub</span>
                     </a>
-                    <a href="cv.pdf" target="_blank" class="portfolio-link">
-                        <img src="images.jpeg" alt="CV">
-                        <span>CV</span>
-                    </a>
+                    
                 </div>
             </div>
             
