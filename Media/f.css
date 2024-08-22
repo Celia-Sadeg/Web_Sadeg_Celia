@@ -301,3 +301,70 @@ body {
 .project-card:hover {
     transform: scale(1.05);
 }
+/* Styles généraux pour les petits écrans */
+@media (max-width: 768px) {
+    body {
+        background-size: 200% 200%; /* Réduire la taille de l'arrière-plan pour les écrans plus petits */
+    }
+    
+    .profile-container {
+        flex-direction: column; /* Empiler la photo et le texte pour les petits écrans */
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-picture {
+        width: 150px; /* Réduire la taille de la photo */
+        height: 150px;
+        margin: 1rem 0; /* Espace entre la photo et le texte */
+    }
+
+    .about-container {
+        flex-direction: column; /* Empiler le bloc contact et le texte */
+        align-items: center;
+    }
+
+    .contact-info {
+        margin-bottom: 2rem; /* Ajouter de l'espace en dessous du bloc contact */
+    }
+
+    .about-text {
+        max-width: 100%; /* Utiliser toute la largeur disponible */
+        padding: 0 1rem; /* Ajouter un peu de padding */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Empiler les éléments de compétences */
+        align-items: center;
+    }
+
+    .skill-item {
+        width: auto; /* Ajuster la largeur des éléments */
+        margin-bottom: 1rem; /* Ajouter de l'espace entre les éléments */
+    }
+
+    .project-card {
+        width: 100%; /* Adapter la largeur des cartes de projet */
+        max-width: 350px; /* Limiter la largeur maximum */
+    }
+
+    .portfolio {
+        width: 100%; /* Utiliser toute la largeur disponible */
+        position: static; /* Déplacer la section portfolio sous le contenu */
+        background: none;
+        border: none;
+        padding: 1rem;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .portfolio-link {
+        margin: 0.5rem 0; /* Ajuster les marges pour les petits écrans */
+    }
+
+    .bubble {
+        width: 30px; /* Réduire la taille des bulles */
+        height: 30px;
+        bottom: -100px; /* Ajuster la position des bulles */
+    }
+}
