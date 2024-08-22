@@ -1,0 +1,139 @@
+/* styles.css */
+body {
+    background-image: url('images/game-background.jpg');
+    background-size: cover; /* Couvre tout l'arrière-plan */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+  }
+  
+  .container {
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(174, 234, 45, 0.8); /* Fond blanc semi-transparent */
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #score {
+    margin: 20px 0;
+  }
+  
+  #cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .player-cards {
+    width: 150px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 70px;
+    border: 20px solid #0c197e;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 140px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /* styles.css */
+
+/* Autres styles... */
+
+.rules-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Position fixe pour rester en haut à gauche */
+    top: 20px;
+    left: 20px;
+    width: 250px; /* Largeur fixe pour le panneau */
+  }
+  
+  .rules-card h2 {
+    margin-top: 0;
+  }
+  
+  .rules-card p {
+    margin: 10px 0;
+  }
+  
+  .rules-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .rules-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .container {
+    margin-left: 300px; /* Pour éviter que le contenu soit caché par la carte des règles */
+  }
+  
+  #game {
+    margin-top: 20px;
+  }
+  
+  .card.red {
+    color: red;
+  }
+  
+  .card.black {
+    color: black;
+  }
+  
+  #deck {
+    margin: 20px 0;
+  }
+  
+  .result, #round-result {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  #round-result {
+    font-weight: bold;
+  }
+  

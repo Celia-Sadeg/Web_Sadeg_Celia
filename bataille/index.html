@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Cartes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="rules-card" id="rules-card">
+        <h2>Règles du Jeu</h2>
+        <p>1. Chaque joueur tire une carte.</p>
+        <p>2. La carte avec la valeur la plus élevée gagne la manche.</p>
+        <p>3. Les cartes sont tirées alternativement jusqu'à ce qu'il n'y ait plus de cartes dans le paquet.</p>
+        <p>4. Le joueur avec le plus grand nombre de victoires à la fin du jeu est le gagnant.</p>
+        <button id="close-rules" onclick="toggleRules()">Fermer</button>
+    </div>
+    
+    <div class="container">
+        <h1>Jeu de Cartes</h1>
+        <div id="game">
+            <button id="draw-button" onclick="drawCard()">Tirer une carte</button>
+            <button id="restart-button" onclick="restartGame()" style="display: none;">Recommencer</button>
+            <button id="abort-button" onclick="abortGame()" style="display: none;">Abandonner</button>
+            <div id="score">
+                <h2>Scores</h2>
+                <p>Joueur 1 : <span id="score-player1">0</span></p>
+                <p>Joueur 2 : <span id="score-player2">0</span></p>
+            </div>
+            <div id="cards-container">
+                <div class="player-cards">
+                    <h2>Joueur 1</h2>
+                    <div id="player1-card" class="card"></div>
+                </div>
+                <div class="player-cards">
+                    <h2>Joueur 2</h2>
+                    <div id="player2-card" class="card"></div>
+                </div>
+            </div>
+            <div id="deck">
+                <h2>Cartes restantes</h2>
+                <div id="deck-cards" class="card"></div>
+            </div>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

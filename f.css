@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e6b6dd, #333399, #00ffff, #ff9900, #33ff66);
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+    overflow-x: hidden;
+}
+.project-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Section des compétences */
+#skills {
+    padding: 20px;
+    max-width: 300px; /* Pour aligner les éléments sur le côté gauche */
+}
+
+/* Chaque groupe de compétences */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Pour permettre aux éléments de se positionner côte à côte */
+    gap: 10px; /* Espacement entre les éléments */
+    margin-bottom: 20px; /* Espace entre les groupes */
+}
+
+/* Chaque item de compétence */
+.skill-item {
+    display: flex;
+    align-items: center;
+    width: 120px; /* Largeur fixe pour bien aligner les éléments */
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+.skill-item span {
+    font-size: 1em;
+}
+
+.about-container {
+    display: flex;
+    justify-content: flex-start; /* Aligner le contenu à gauche */
+    align-items: flex-start;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Espacement à droite du bloc contact */
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin: 10px 0;
+}
+
+.contact-link img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.about-text {
+    max-width: 70%; /* Ajustement pour donner plus d'espace au texte */
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+/* Conteneur principal du profil */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pour centrer verticalement la photo avec le texte */
+    margin-bottom: 20px;
+}
+
+/* Contenu textuel du profil */
+.profile-info {
+    max-width: 70%; /* Limite la largeur du texte pour laisser de l'espace à l'image */
+}
+
+/* Conteneur principal du profil */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pour centrer verticalement la photo avec le texte */
+    margin-bottom: 20px;
+}
+
+/* Contenu textuel du profil */
+.profile-info {
+    max-width: 70%; /* Limite la largeur du texte pour laisser de l'espace à l'image */
+}
+
+/* Style pour la photo de profil */
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 80%;
+    overflow: hidden;
+    border: 30px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    z-index: 10;
+    margin-left: 30px; /* Espace entre la photo et le texte */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.portfolio {
+    position: fixed;
+    top: 220px;
+    right: 20px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    color: #333;
+    border: 2px solid #00ffff;
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+}
+
+.portfolio-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin: 10px 0;
+}
+
+.portfolio img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -150px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+    opacity: 0.6;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Bulle animée */
+.bubble {
+    position: absolute;
+    bottom: -150px;
+    width: 50px;  /* Réduit la taille des bulles pour en ajouter plus */
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: riseAndBounce 8s infinite ease-in-out;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Animation de montée avec rebond */
+@keyframes riseAndBounce {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    25% {
+        transform: translateY(-30vh) scale(1.2);
+    }
+    50% {
+        transform: translateY(-60vh) scale(1);
+    }
+    75% {
+        transform: translateY(-90vh) scale(0.8);
+    }
+    100% {
+        transform: translateY(-120vh) scale(1);
+    }
+}
+
+/* Ajustements pour les bulles impaires */
+.bubble:nth-child(odd) {
+    background-color: rgba(219, 242, 17, 0.3);
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet de rebond */
+}
+
+/* Ajustements pour les bulles paires */
+.bubble:nth-child(even) {
+    background-color: rgba(80, 156, 57, 0.2);
+    animation-duration: 12s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet de rebond */
+}
+
+/* Ajustement pour chaque troisième bulle */
+.bubble:nth-child(3n) {
+    background-color: rgba(255, 255, 255, 0.2);
+    animation-duration: 15s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet de rebond */
+}
+
+/* Plus de bulles */
+@keyframes rise {
+    0% { transform: translateY(0) scale(1); }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+}
+/*/
+/* Styles pour la section Projets */
+#projects {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin: 0 1rem 1rem;
+    color: #555;
+}
+
+.project-card .project-link {
+    display: block;
+    margin: 0 1rem 1rem;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-card .project-link:hover {
+    background-color: #0056b3;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}

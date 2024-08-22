@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Magique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>🌟 To-Do List Magique 🌟</h1>
+        </div>
+        <div class="input-container">
+            <input v-model="newTask.text" placeholder="Ajouter une tâche" />
+            <input type="date" v-model="newTask.dueDate" placeholder="Date d'échéance" />
+            <select v-model="newTask.priority">
+                <option value="">Priorité</option>
+                <option value="urgent">Urgent</option>
+                <option value="high">Haute</option>
+                <option value="medium">Moyenne</option>
+                <option value="low">Basse</option>
+            </select>
+            <select v-model="newTask.group">
+                <option value="">Sélectionnez un groupe</option>
+                <option value="Aujourd'hui">Aujourd'hui</option>
+                <option value="Important">Important</option>
+                <option v-for="group in customGroups" :value="group">{{ group }}</option>
+            </select>
+            <input v-model="newGroup" placeholder="Ajouter un nouveau groupe" />
+            <button @click="addGroup">Ajouter Groupe</button>
+            <button @click="addTask">Ajouter</button>
+        </div>
+        <div class="filter-buttons">
+            <button @click="filterTasks('today')">Afficher Aujourd'hui</button>
+            <button @click="filterTasks('all')">Afficher Tout</button>
+            <button @click="filterTasks('important')">Tâches Importantes</button>
+        </div>
+        <ul>
+            <li v-for="(task, index) in filteredTasks" :key="index" :class="{ completed: task.completed, urgent: task.priority === 'urgent' }">
+                <input type="checkbox" v-model="task.completed" />
+                <span>{{ task.text }}</span>
+                <span v-if="task.dueDate" class="due-date"> - Échéance: {{ formatDate(task.dueDate) }}</span>
+                <span v-if="task.group" class="group"> - Groupe: {{ task.group }}</span>
+                <button @click="removeTask(index)" class="delete-button">❌</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Votre code JavaScript -->
+    <script src="todo.js"></script>
+</body>
+</html>
