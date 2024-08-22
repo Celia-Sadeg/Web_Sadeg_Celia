@@ -4,162 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-   
+    <link rel="stylesheet" href="f.css">
     <style>
-        /* Styles généraux */
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #e6b6dd, #333399, #00ffff, #ff9900, #33ff66);
-    background-size: 300% 300%;
-    animation: gradientShift 15s ease infinite;
-    position: relative;
-    overflow-x: hidden;
-}
-
-        /* Styles pour la section Projets */
-        #projects {
-            padding: 2rem;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        #projects h2 {
-            margin-bottom: 1rem;
-        }
-
-        .projects-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .project-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 300px;
-            text-align: left;
-            transition: transform 0.3s ease;
-            position: relative;
-            padding: 1rem;
-        }
-
-        .project-card h3 {
-            margin: 1rem 0;
-            font-size: 1.5rem;
-        }
-
-        .project-card p {
-            margin: 0 0 1rem;
-            color: #555;
-        }
-
-        .project-card .project-link {
-            display: block;
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .project-card .project-link:hover {
-            background-color: #0056b3;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Autres styles */
-        #profile, #about, #skills {
-            padding: 2rem;
-        }
-
-        .profile-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .profile-info {
-            flex: 1;
-        }
-
-        .profile-picture img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .contact-info {
-            margin-bottom: 2rem;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            margin: 0.5rem 0;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .contact-link img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            padding: 0.5rem;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-item img {
-            width: 30px;
-            height: 30px;
-            margin-right: 8px;
-        }
-
-        .portfolio {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .portfolio-link {
-            display: inline-block;
-            margin: 0.5rem;
-            padding: 0.5rem 1rem;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .portfolio-link img {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
+        
+      
     </style>
 </head>
 <body>
@@ -300,13 +148,14 @@
     </section>
     
     <!-- Portfolio -->
-    <div class="portfolio">
+    <div class="profile-picture">
         <!-- Lien GitHub -->
         <a href="https://github.com/Celia-Sadeg" target="_blank" class="portfolio-link">
             <img src="git.png" alt="GitHub">
             <span>GitHub</span>
         </a>
         <!-- Lien CV -->
+        <div class="profile-picture">
         <a href="cv.pdf" target="_blank" class="portfolio-link">
             <img src="images.jpeg" alt="CV">
             <span>CV</span>
