@@ -6,7 +6,124 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="f.css">
     <style>
-        
+        .picture {
+    
+    top: 20px;  /* Ajustez la distance du haut du site */
+    right: 20px;  /* Ajustez la distance du côté droit du site */
+    width: 200px;  /* Taille de l'image */
+    height: 200px;  /* Taille de l'image */
+    border-radius: 50%;  /* Pour rendre l'image ronde */
+    overflow: hidden;  /* Pour que l'image soit bien rognée en cercle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Ombre douce pour donner de la profondeur */
+    z-index: 100;  /* Pour s'assurer que l'image est au-dessus des autres éléments */
+    border: 3px solid #ffffff;  /* Bordure blanche autour de l'image */
+    background-color: #f9f9f9;  /* Fond en cas d'absence d'image */
+}
+
+.picture img {
+    width: 100%;  /* L'image prend toute la largeur de son conteneur */
+    height: 100%;  /* L'image prend toute la hauteur de son conteneur */
+    object-fit: cover;  /* L'image remplit le conteneur tout en conservant son aspect */
+}
+
+
+.about-section {
+    max-width: 600px;  /* Limite la largeur de la section pour une meilleure lisibilité */
+    margin: 20px auto;  /* Centre la section horizontalement et ajoute de l'espace autour */
+    padding: 20px;  /* Ajoute de l'espace interne pour respirer */
+    background-color: #53d3e7;  /* Arrière-plan doux et agréable */
+    border-radius: 10px;  /* Coins légèrement arrondis pour une apparence moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Ombre douce pour un effet de profondeur */
+    opacity: 0;  /* Initialement transparent pour l'animation d'apparition */
+    transform: translateY(20px);  /* Positionne la section légèrement en dehors de la vue pour l'animation */
+    transition: all 0.5s ease-in-out;  /* Transition douce pour tous les éléments */
+    animation: fadeInUp 0.8s forwards;  /* Animation d'apparition vers le haut */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section h2 {
+    font-family: 'Arial', sans-serif;  /* Police propre et lisible */
+    font-size: 24px;  /* Taille de la police pour le titre */
+    color: #333;  /* Couleur du texte du titre */
+    margin-bottom: 10px;  /* Espace entre le titre et le paragraphe */
+    opacity: 0;  /* Initialement transparent pour l'animation */
+    animation: fadeInUp 1s 0.3s forwards;  /* Animation d'apparition avec délai pour un effet progressif */
+}
+
+.about-section p {
+    font-family: 'Arial', sans-serif;  /* Même police pour une cohérence */
+    font-size: 16px;  /* Taille de la police pour le texte */
+    line-height: 1.6;  /* Espace entre les lignes pour une meilleure lisibilité */
+    color: #555;  /* Couleur du texte */
+    text-align: justify;  /* Justifie le texte pour un look propre */
+    opacity: 0;  /* Initialement transparent pour l'animation */
+    animation: fadeInUp 1s 0.5s forwards;  /* Animation d'apparition avec délai pour un effet progressif */
+}
+/* Conteneur principal pour "À propos" et les liens */
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre la section et les liens */
+    margin: 20px auto;
+    max-width: 1000px; /* Largeur maximale pour la section */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section "À propos" */
+.about-section {
+    flex: 1; /* Prend l'espace disponible restant */
+    max-width: 60%; /* Limite la largeur pour ne pas trop s'étirer */
+}
+
+/* Liens CV et GitHub */
+.links-container {
+    display: flex;
+    flex-direction: column; /* Empile les liens verticalement */
+    gap: 10px; /* Espacement entre les liens */
+    align-items: flex-start; /* Aligne les éléments à gauche */
+}
+
+.portfolio-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-link:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-link img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.portfolio-link span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
       
     </style>
 </head>
@@ -21,7 +138,7 @@
             </div>
             
             <!-- Photo de profil à droite -->
-            <div class="profile-picture">
+            <div class="picture">
                 <img src="im.jpg" alt="Your Photo">
             </div>
         </div>
@@ -49,11 +166,24 @@
                 </a>
             </div>
 
-            <!-- Texte À propos -->
-            <div class="about-text">
+            <div class="about-section">
                 <h2>À propos</h2>
-                <p>Je recherche un contrat d'alternance dans le cadre de mon Bachelor en Développement Web et Applications Mobiles à l'Efrei. Passionnée, organisée et autodidacte, j'aime apprendre de nouvelles technologies et relever des défis. Motivé et créatif, je suis prête à contribuer à vos projets et à collaborer avec des professionnels du secteur.</p>
+                <p>
+                    Je recherche un contrat d'alternance dans le cadre de mon Bachelor en Développement Web et Applications Mobiles à l'Efrei. Passionnée, organisée et autodidacte, 
+                    j'aime apprendre de nouvelles technologies et relever des défis. Motivé et créatif, je suis prête à contribuer à vos projets et à collaborer avec des professionnels du secteur.
+                </p>
+                <div class="links-container">
+                    <a href="https://github.com/Celia-Sadeg" target="_blank" class="portfolio-link">
+                        <img src="git.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="cv.pdf" target="_blank" class="portfolio-link">
+                        <img src="images.jpeg" alt="CV">
+                        <span>CV</span>
+                    </a>
+                </div>
             </div>
+            
         </div>
     </section>
 
@@ -147,21 +277,8 @@
         </div>
     </section>
     
-    <!-- Portfolio -->
-    <div class="profile-picture">
-        <!-- Lien GitHub -->
-        <a href="https://github.com/Celia-Sadeg" target="_blank" class="portfolio-link">
-            <img src="git.png" alt="GitHub">
-            <span>GitHub</span>
-        </a>
-        <!-- Lien CV -->
-        <div class="profile-picture">
-        <a href="cv.pdf" target="_blank" class="portfolio-link">
-            <img src="images.jpeg" alt="CV">
-            <span>CV</span>
-        </a>
-    </div>
-
+    
+    
     <!-- Ajout de bulles animées -->
     <div class="bubble" style="left: 10%;"></div>
     <div class="bubble" style="left: 20%;"></div>

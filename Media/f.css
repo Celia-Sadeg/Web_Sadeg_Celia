@@ -9,12 +9,6 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-.project-image {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #dc1c1c;
-    margin-bottom: 1rem;
-}
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
