@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #e6b6dd, #333399, #00ffff, #ff9900, #33ff66);
+    background: linear-gradient(135deg, #ab0f48, #b00435, #510131, #6c035c, #7e57c2);
     background-size: 300% 300%;
     animation: gradientShift 15s ease infinite;
     position: relative;
@@ -100,9 +100,7 @@ body {
 }
 
 /* Contenu textuel du profil */
-.profile-info {
-    max-width: 70%; /* Limite la largeur du texte pour laisser de l'espace à l'image */
-}
+
 
 /* Conteneur principal du profil */
 .profile-container {
@@ -113,8 +111,10 @@ body {
 }
 
 /* Contenu textuel du profil */
+/* Contenu textuel du profil */
 .profile-info {
     max-width: 70%; /* Limite la largeur du texte pour laisser de l'espace à l'image */
+    color: #ffffff; /* Texte en blanc */
 }
 
 /* Style pour la photo de profil */
