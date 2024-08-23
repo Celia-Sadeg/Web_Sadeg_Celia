@@ -1,0 +1,64 @@
+/* Container principal pour l'authentification */
+.auth-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+
+/* Formulaire */
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    color: #76c7c0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #333333;
+    border: 1px solid #555555;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+button {
+    background-color: #76c7c0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5ca79e;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #76c7c0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b2f7ef;
+}
