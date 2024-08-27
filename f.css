@@ -252,13 +252,17 @@ body {
 
 .projects-container {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
+    background-color: #79054b;
+   
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #f2ebeb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;

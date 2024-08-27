@@ -164,11 +164,54 @@ section {
     font-size: 16px;
     font-weight: bold;
 }
+/* Style du footer */
+.footer {
+    background-color: #470330; /* Couleur de fond du footer */
+    padding: 20px 0; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    color: #fff; /* Couleur du texte */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1000px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+}
+
+.footer p {
+    margin: 0; /* Supprime les marges par défaut */
+    font-size: 14px; /* Taille du texte */
+}
+
+.footer-links {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime les marges internes */
+    margin-top: 10px; /* Espace au-dessus des liens */
+}
+
+.footer-links li {
+    display: inline; /* Affiche les liens sur une seule ligne */
+    margin: 0 10px; /* Espace entre les liens */
+}
+
+.footer-links a {
+    color: #fff; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: color 0.3s; /* Animation de la couleur */
+}
+
+.footer-links a:hover {
+    color: #ddd; /* Couleur des liens au survol */
+}
 
       
     </style>
 </head>
 <body>
+       
+    
     <!-- Barre de navigation -->
     <nav class="navbar">
         <ul class="navbar-menu">
@@ -248,7 +291,7 @@ section {
             <div class="project-card">
                 <img src="ba.png" alt="Image du projet 2" class="project-image">
                 <h3>Jeu de Bataille</h3>
-                <p>développement de jeu  de cartes avec regles simples</p>
+                <p>Développement d'un jeu de cartes avec des règles simples.</p>
                 <a href="bataille/index.html" class="project-link">Tester!</a>
             </div>
            
@@ -348,7 +391,17 @@ section {
         </div>
     </section>
     
-    
+     <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Celia Sadeg. Tous droits réservés.</p>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/Celia-Sadeg" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/celia-sadeg-6022b82b5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:sadeg.celia.pro@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </footer>
     
     <!-- Ajout de bulles animées -->
     <div class="bubble" style="left: 10%;"></div>
