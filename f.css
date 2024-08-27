@@ -246,8 +246,9 @@ body {
 /* Styles pour la section Projets */
 #projects {
     padding: 2rem;
-    background-color: #f9f9f9;
+    
     text-align: center;
+    background: linear-gradient(135deg, #0dad1a, #0a9d76ba, #510131, #49af1e, #07baa6);
 }
 
 .projects-container {
@@ -256,10 +257,14 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 1rem;
-    background-color: #79054b;
-   
+    gap: 3rem;
+    background: linear-gradient(135deg, #0dad1a, #0a9d76ba, #510131, #49af1e, #07baa6);
+
+    width: 80%; /* ou une autre valeur en pixels ou en pourcentage */
+    max-width: 1200px; /* Ajustez la largeur maximale si nécessaire */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
 }
+
 
 .project-card {
     background-color: #f2ebeb;
