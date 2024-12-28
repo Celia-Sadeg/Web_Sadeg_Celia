@@ -1,16 +1,3 @@
-but de javascript:
-les outils:
-les commentaires:CTRL /HRYHOGRALANE
-la syntaxe
-les variables
-la concaénation
-les types de données
-les opérateur
-les structures decontroles
-les fonctions
-la portée des variables
-
-
 \documentclass[a4paper,12pt]{article}
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -61,3 +48,66 @@ la portée des variables
 \end{enumerate}
 
 \end{document}
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Exercice sur le Système de Fichiers}
+\author{Votre Nom}
+\date{\today}
+\maketitle
+
+\section*{I. Le Système de Fichiers}
+
+\subsection*{I.1 Utiliser le Système de Fichiers}
+
+\begin{enumerate}[label=\textbf{Question \arabic*:}]
+    \item Ouvrez un terminal en tant qu’utilisateur  ==> sudo su :
+    \begin{enumerate}
+        \item Votre nom de connexion. \\ 
+        \textbf{Réponse :} \texttt{whoami} \\
+        \item a/Votre UID (IDentifiant Utilisateur) et GID (IDentifiant de Groupe). \\ 
+        \textbf{Réponse :} \texttt{id} \\
+
+        \item c/Le nom de la machine de connexion. \\ 
+        \textbf{Réponse :} \texttt{hostname} \\
+
+        \item d/La liste des utilisateurs connectés à la même machine que vous. \\ 
+        \textbf{Réponse :} \texttt{who} \\
+
+        \item Le nom du répertoire courant. \\ 
+        \textbf{Réponse :} \texttt{pwd} \\
+
+        \item La liste de tous les fichiers du répertoire courant (fichiers cachés compris). \\ 
+        \textbf{Réponse :} \texttt{ls -a} \\ 
+    \end{enumerate}
+
+    \item Positionnez-vous sous le sous-répertoire de nom local du répertoire /usr. \\ 
+\textbf{Réponse :} \texttt{cd /usr/local} \\ 
+
+\item Positionnez-vous sous votre répertoire de connexion. \\ 
+\textbf{Réponse :} \texttt{cd ~} \\ 
+
+\item Affichez la liste de tous les fichiers de chacun des répertoires /usr/local/bin, /bin et /usr/share, en utilisant la désignation absolue ou relative. \\ 
+\textbf{Réponse :} 
+\begin{itemize}
+    \item \texttt{ls /usr/local/bin}
+    \item \texttt{ls /bin}
+    \item \texttt{ls /usr/share}
+\end{itemize} \\ 
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+1.	MASSIANI Louis-Paul 
