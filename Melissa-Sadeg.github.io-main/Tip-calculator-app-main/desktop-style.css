@@ -1,0 +1,44 @@
+@media screen and (width >= 900px){
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: url(/images/bg-intro-desktop.png);
+
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        margin: 0 11%;
+        max-width: 1125px;
+    }
+
+
+    .description-block {
+        text-align: left;
+        padding-top: 200px;
+    }
+
+    .description-block h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+
+    #sign-up-form {
+        padding: 2.5rem 2rem;
+        box-shadow: 0 8px 2px 0 rgba(0,0,0,0.2);
+    }
+    #sign-up-form input {
+        padding-left: 2rem;
+    }
+
+    .input-box {
+        margin-bottom: 2rem
+    }
+
+
+
+}

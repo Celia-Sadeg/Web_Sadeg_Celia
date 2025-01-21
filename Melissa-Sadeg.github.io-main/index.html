@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-theme1.css">
+  <link rel="stylesheet" href="style-theme2.css">
+  <link rel="stylesheet" href="style-theme3.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+  </style>
+  
+  <title>Calculator app</title>
+</head>
+<body class="theme1">
+  <main>
+    <section class="head-section">
+      <h1>calc</h1>
+      <div id="theme-block">
+        <span>THEME</span>
+        <div id="theme-switch-area">
+          <p><span>1</span><span>2</span><span>3</span></p>
+          <div id="toggle-area">
+            <button id="theme1-button"></button>
+            <button id="theme2-button"></button>
+            <button id="theme3-button"></button>
+            <button id="toggle-button"></button>
+        </div>
+      </div>
+      </div>
+    </section>
+  
+    <section class="display-section">
+      <p id="output">399,981</p>
+    </section>
+  
+    <section class="button-section">
+      <button id="7">7</button><button id="8">8</button><button id="9">9</button><button id="del">DEL</button>
+      <button id="4">4</button><button id="5">5</button><button id="6">6</button><button class="operator" id="plus">+</button>
+      <button id="1">1</button><button id="2">2</button><button id="3">3</button><button class="operator" id="minus">-</button>
+      <button id="point">.</button><button id="0">0</button><button class="operator" id="divide">÷</button><button class="operator" id="multiply">x</button>
+      <button id="reset">RESET</button><button class="operator" id="equal">=</button>
+    </section>
+  </main>
+  
+
+  
+  <script src="script.js"></script>
+  <script src="switchTheme.js"></script>
+</body>
+</html>

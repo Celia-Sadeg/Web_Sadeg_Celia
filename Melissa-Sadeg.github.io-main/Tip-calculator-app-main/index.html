@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/mobile-style.css">
+  <link rel="stylesheet" href="css/desktop-style.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+  </style>
+  
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <h1>SPLITTER</h1>
+  <main class="main-container">
+    <section class="input-section">
+      <div id="bill-block">
+        <p id="bill-label" class="label">Bill<span id="bill-error-message" class="error-message">Not valid</span></p>
+        <input id="bill-input" name="bill-input" type="number" min=0 placeholder="0">
+      </div>
+      <p id="tip-label" class="label">Select Tip %<span id="tip-error-message" class="error-message">Not valid</span></p>
+      <div id="tip-block"> 
+        <span class="tip-rate">5%</span><span class="tip-rate">10%</span><span class="tip-rate">15%</span>
+        <span class="tip-rate">25%</span><span class="tip-rate">50%</span>
+        <input id="custom-tip-input" name="custom-tip-input" type="number" min=0 class="tip-rate"
+        placeholder="Custom">
+      </div>
+
+      <div id="number-of-people-block" >
+        <p id="number-of-people-label" class="label">Number of People<span id="people-error-message" class="error-message">Can't be zero</span></p>
+        <input id="number-of-people-input" name="number-of-people-input" type="number" min="0" placeholder="0">
+      </div>
+
+    </section>
+    <section class="output-section">
+      <div>
+        <div id="tip-output-block">
+          <div><p class="output-label">Tip Amount</p><p class="per-person">/ person</p></div>
+          <p class="output-number">$<span id="tip-output">0.00</span></p>
+        </div>
+
+        <div id="total-output-block">
+          <div><p class="output-label">Total</p><p class="per-person">/ person</p></div>
+          <p class="output-number">$<span id="total-output">0.00</span></p>
+        </div>
+    </div>
+
+     <button id="reset-button">RESET</button> 
+    </section>
+  </main>
+  <script src="calculator.js"></script>
+</body>
+
+</html>

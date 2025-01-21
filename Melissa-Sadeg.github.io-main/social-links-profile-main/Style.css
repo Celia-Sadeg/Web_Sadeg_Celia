@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+:root {
+  /* definir les varibles comme couleur */
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+  --Green: hsl(75, 94%, 57%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* selecteur type balise  */
+body {
+  /* modifie la police de tous les texte  */
+  font-family: "Inter", sans-serif;
+  /* modifie la couleur du fond  */
+  background-color: var(--Off-Black);
+  text-align: center;
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+main {
+  background-color: var(--Dark-Grey);
+  color: var(--White);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 46px;
+}
+img {
+  /* forme image  */
+  border-radius: 50%;
+  width: 140px;
+}
+ul {
+  list-style: none;
+  /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  width: 100%;
+}
+li {
+  background-color: var(--Grey);
+  /* separer  les list */
+  /* margin: 15px;  */
+  text-align: center;
+  padding: 13px;
+  border-radius: 10px;
+  /* width: 100%; */
+  margin-bottom: 16px;
+  font-weight: 700;
+  /* effet cursseur */
+  cursor: pointer;
+}
+.profil > * {
+  margin-bottom: 30px;
+}
+h1 {
+  font-size: 28px;
+  line-height: 0.25;
+}
+#location {
+  color: var(--Green);
+}
+li:hover {
+  /* definir leffet  lorce que on met le cursseur */
+  background-color: var(--Green);
+  color: var(--Off-Black);
+}

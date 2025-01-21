@@ -1,0 +1,57 @@
+:root {
+        /*-------------theme 1--------------*/
+        --theme1-main-bg-color: hsl(222, 26%, 31%);
+        --theme1-keypad-bg-color: hsl(223, 31%, 20%);
+        --theme1-screen-bg-color: hsl(224, 36%, 15%);
+        /*del keys*/
+        --theme1-key-bg-blue: hsl(225, 21%, 49%);
+        --theme1-key-shadow-blue: hsl(224, 28%, 35%);
+        /*equal key*/
+        --theme1-key-bg-red: hsl(6, 63%, 50%);
+        --theme1-key-shadow-red: hsl(6, 70%, 34%);
+        /*number keys*/
+        --theme1-key-bg-orange: hsl(30, 25%, 89%);
+        --theme1-key-shadow-orange: hsl(28, 16%, 65%);
+        /*text color*/
+        --theme1-text-blue: hsl(221, 14%, 31%);
+}
+
+body.theme1 {
+    background-color: var(--theme1-main-bg-color);
+}
+
+.theme1 .button-section, .theme1 #toggle-area{
+    background-color: var(--theme1-keypad-bg-color);
+}
+
+.theme1 .display-section {
+    background-color: var(--theme1-screen-bg-color);
+}
+
+
+.theme1 .button-section button {
+    color: var(--theme1-text-blue);
+    background-color: var(--theme1-key-bg-orange);
+    box-shadow: 0px 4px var(--theme1-key-shadow-orange);
+}
+
+
+.theme1 .head-section,.theme1 .display-section, 
+.theme1 #del, .theme1 #reset, .theme1 #equal {
+    color: white;
+}
+
+.theme1 #del, .theme1 #reset {
+    background-color: var(--theme1-key-bg-blue);
+    box-shadow: 0px 4px var(--theme1-key-shadow-blue);
+}
+
+.theme1 #equal {
+    background-color: var(--theme1-key-bg-red);
+    box-shadow: 0px 4px var(--theme1-key-shadow-red);
+}
+
+
+.theme1 #toggle-button {
+    background-color: var(--theme1-key-bg-red);
+}

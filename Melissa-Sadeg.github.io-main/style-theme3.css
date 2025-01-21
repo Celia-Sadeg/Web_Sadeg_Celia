@@ -1,0 +1,58 @@
+:root {
+    /*-------------theme 3--------------*/
+    --theme3-main-bg-color: hsl(268, 75%, 9%);
+    --theme3-keypad-bg-color: hsl(268, 71%, 12%);
+   /*del keys*/
+   --theme3-key-bg-bright-violet: hsl(281, 89%, 26%);
+   --theme3-key-shadow-bright-violet: hsl(285, 91%, 52%);
+    /*equal key*/
+    --theme3-key-bg-cyan: hsl(176, 100%, 44%);
+    --theme3-key-shadow-cyan: hsl(177, 92%, 70%);
+    /*number keys*/
+    --theme3-key-bg-violet:  hsl(268, 47%, 21%);
+    --theme3-key-shadow-violet: hsl(290, 70%, 36%);
+    /*text color*/
+    --theme3-text-yellow: hsl(52, 100%, 62%);
+    --theme3-text-blue: hsl(198, 20%, 13%);
+}
+
+body.theme3 {
+    background-color: var(--theme3-main-bg-color);
+}
+
+.theme3 .button-section, .theme3 #toggle-area, .theme3 .display-section {
+    background-color: var(--theme3-keypad-bg-color);
+}
+
+
+.theme3 .button-section button {
+    color: var(--theme3-text-yellow);
+    background-color: var(--theme3-key-bg-violet);
+    box-shadow: 0px 4px var(--theme3-key-shadow-violet);
+}
+
+.theme3 .head-section, .theme3 .display-section{
+    color: var(--theme3-text-yellow);
+}
+
+.theme3 #del, .theme3 #reset, .theme3 #equal{
+    color:white;
+}
+
+.theme3 #del, .theme3 #reset {
+    background-color: var(--theme3-key-bg-bright-violet);
+    box-shadow: 0px 4px var(--theme3-key-shadow-bright-violet);
+}
+
+.theme3 #equal {
+    background-color: var(--theme3-key-bg-cyan);
+    box-shadow: 0px 4px var(--theme3-key-shadow-cyan);
+}
+
+.theme3 #equal:hover {
+    color: var(--theme3-main-bg-color);
+}
+
+.theme3 #toggle-button {
+    background-color: var(--theme3-key-bg-cyan);
+}
