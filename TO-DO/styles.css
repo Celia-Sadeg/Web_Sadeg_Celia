@@ -2,7 +2,9 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background:black
+    background: #0c4161;
+ 
+ 
     color: #444;
     display: flex;
     justify-content: center;
@@ -11,7 +13,7 @@ body {
 }
 
 #app {
-    background: #ffffff;
+    background: #cbd7de;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 2rem;
