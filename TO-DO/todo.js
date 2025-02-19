@@ -10,7 +10,9 @@ new Vue({
         newGroup: '',
         tasks: [],
         customGroups: ["Aujourd'hui", "Important"],
-        filter: 'all'
+        filter: 'all',
+        taskError: '', // Message d'erreur pour la tâche
+        dueDateError: '', // Message d'erreur pour la date d'échéance
     },
     computed: {
         filteredTasks() {
@@ -26,7 +28,18 @@ new Vue({
     },
     methods: {
         addTask() {
-            if (this.newTask.text.trim()) {
+            // Validation des champs avant d'ajouter une tâche
+            this.taskError = '';
+            this.dueDateError = '';
+            
+            if (!this.newTask.text.trim()) {
+                this.taskError = 'Veuillez remplir le champ "Ajouter une tâche".';
+            }
+            if (!this.newTask.dueDate) {
+                this.dueDateError = 'Veuillez spécifier une date d\'échéance.';
+            }
+
+            if (this.newTask.text.trim() && this.newTask.dueDate) {
                 this.tasks.push({
                     text: this.newTask.text,
                     completed: false,
@@ -63,4 +76,3 @@ new Vue({
         }
     }
 });
-

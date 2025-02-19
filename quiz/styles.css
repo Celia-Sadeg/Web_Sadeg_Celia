@@ -2,7 +2,7 @@
 .auth-container {
     max-width: 400px;
     margin: 100px auto;
-    background-color: #1e1e1e;
+    background: url('backs.png') no-repeat center center fixed;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -29,7 +29,7 @@ form {
 }
 
 input {
-    background-color: #333333;
+    background: url('backs.png') no-repeat center center fixed;
     border: 1px solid #555555;
     padding: 10px;
     margin: 10px 0;

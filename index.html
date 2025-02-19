@@ -5,7 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="f.css">
+    
     <style>
+    .about-section {
+    font-size: 40px; /* Plus grand */
+    line-height: 1.8; /* Ajuste l'espacement pour une meilleure lisibilité */
+    max-width: 600px;  /* Limite la largeur de la section pour une meilleure lisibilité */
+    position: relative;
+    top: -170px; /* Remonte encore plus haut */
+    left: 50px; /* Déplace légèrement vers la droite */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 70px;  /* Ajoute de l'espace interne pour respirer */
+    background: url('backs.png') no-repeat center center fixed;
+    border-radius: 10px;  /* Coins légèrement arrondis pour une apparence moderne */
+    box-shadow: 0 4px 20px rgb(240, 245, 240);  /* Ombre douce pour un effet de profondeur */
+    opacity: 0;  /* Initialement transparent pour l'animation d'apparition */
+    transform: translateY(20px);  /* Positionne la section légèrement en dehors de la vue pour l'animation */
+    transition: all 0.5s ease-in-out;  /* Transition douce pour tous les éléments */
+    animation: fadeInUp 0.8s forwards;  /* Animation d'apparition vers le haut */
+}
+
+    .contact-info {
+    position: relative;
+    top: -150px; /* Remonte le bloc (ajuste la valeur selon ton besoin) */
+}
+
+        .certifications {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.certifications ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.certifications li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.certifications img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.certifications img:hover {
+    transform: scale(1.1);
+}
+
+.cv a {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #6c757d; /* Gris */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+/* Effet au survol */
+.cv a:hover {
+    background: #5a6268; /* Gris plus foncé */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+      
+        /* Fond animé avec effet magique */
+        .bubble {
+    position: absolute;
+    top: -100px; /* Commence en haut */
+    width: 40px;
+    height: 40px;
+    background-color: rgba(138, 115, 115, 0.3);
+    border-radius: 50%;
+    animation: floatDown 180s infinite linear;
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) translateX(30px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-30px);
+        opacity: 0;
+    }
+}
+
+
+/* Apparition fluide des sections */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation des particules */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: floating 5s infinite ease-in-out;
+}
+
+.particle:nth-child(1) { left: 10%; top: 20%; animation-duration: 6s; }
+.particle:nth-child(2) { left: 50%; top: 40%; animation-duration: 8s; }
+.particle:nth-child(3) { left: 80%; top: 60%; animation-duration: 7s; }
+
+/* Effet de survol magique */
+a:hover, .btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    text-shadow: 0px 0px 10px #00d4ff;
+}
+
         .picture {
     
     top: 20px;  /* Ajustez la distance du haut du site */
@@ -26,40 +169,45 @@
     object-fit: cover;  /* L'image remplit le conteneur tout en conservant son aspect */
 }
 /* Style pour la barre de navigation */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #5d0135;
-    padding: 10px 0;
-    z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
-}
+
 
 .navbar-menu {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
+    background: linear-gradient(45deg, #000000, #1a1a1a, #333333); /* Dégradé lumineux */
     text-align: center;
+    box-shadow: 0px 0px 10px 2px rgb(247, 246, 251); /* Lueur subtile */
 }
 
+
 .navbar-menu li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block; /* Meilleure gestion des éléments en ligne */
+    margin: 0 10px; /* Réduit l’espace entre les éléments */
 }
 
 .navbar-menu a {
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 8px 16px;
+    color: #ead9d9;
+    font-size: 12px; /* Réduit la taille du texte */
+    padding: 5px 6px; /* Réduit la taille des boutons */
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar-menu a:hover {
-    background-color: #555;
-    color: #f0f0f0;
+    background-color: #f7f4f4;
+    color: #170808;
+}
+
+/* Permet un scroll uniquement sur les petits écrans */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: flex;
+        overflow-x: auto;
+        padding: 5px;
+        justify-content: start; /* Alignement à gauche */
+    }
 }
 
 /* Espacement pour les sections */
@@ -68,18 +216,7 @@ section {
 }
 
 
-.about-section {
-    max-width: 600px;  /* Limite la largeur de la section pour une meilleure lisibilité */
-    margin: 20px auto;  /* Centre la section horizontalement et ajoute de l'espace autour */
-    padding: 20px;  /* Ajoute de l'espace interne pour respirer */
-    background-color: #e9ecef;  /* Arrière-plan doux et agréable */
-    border-radius: 10px;  /* Coins légèrement arrondis pour une apparence moderne */
-    box-shadow: 0 4px 8px rgb(240, 245, 240);  /* Ombre douce pour un effet de profondeur */
-    opacity: 0;  /* Initialement transparent pour l'animation d'apparition */
-    transform: translateY(20px);  /* Positionne la section légèrement en dehors de la vue pour l'animation */
-    transition: all 0.5s ease-in-out;  /* Transition douce pour tous les éléments */
-    animation: fadeInUp 0.8s forwards;  /* Animation d'apparition vers le haut */
-}
+
 
 @keyframes fadeInUp {
     from {
@@ -95,17 +232,23 @@ section {
 .about-section h2 {
     font-family: 'Arial', sans-serif;  /* Police propre et lisible */
     font-size: 24px;  /* Taille de la police pour le titre */
-    color: #333;  /* Couleur du texte du titre */
+    color: #f7f6f6;  /* Couleur du texte du titre */
     margin-bottom: 10px;  /* Espace entre le titre et le paragraphe */
     opacity: 0;  /* Initialement transparent pour l'animation */
     animation: fadeInUp 1s 0.3s forwards;  /* Animation d'apparition avec délai pour un effet progressif */
 }
+.contact-link {
+    background: url('backs.png') no-repeat center center fixed;
+   
+    margin-right: 15px; /* Ajuste selon tes besoins */
+}
+
 
 .about-section p {
     font-family: 'Arial', sans-serif;  /* Même police pour une cohérence */
-    font-size: 16px;  /* Taille de la police pour le texte */
+    font-size: 25px;  /* Taille de la police pour le texte */
     line-height: 1.6;  /* Espace entre les lignes pour une meilleure lisibilité */
-    color: #555;  /* Couleur du texte */
+    color: #f4f1f1;  /* Couleur du texte */
     text-align: justify;  /* Justifie le texte pour un look propre */
     opacity: 0;  /* Initialement transparent pour l'animation */
     animation: fadeInUp 1s 0.5s forwards;  /* Animation d'apparition avec délai pour un effet progressif */
@@ -123,38 +266,30 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Section "À propos" */
+
 .about-section {
-    flex: 1; /* Prend l'espace disponible restant */
-    max-width: 60%; /* Limite la largeur pour ne pas trop s'étirer */
+    flex: 1; 
+    max-width: 60%; 
+    
+    color: #7b0b0b; 
+    
+    padding: 20px; 
+    border-radius: 10px; 
 }
 
-/* Liens CV et GitHub */
-.links-container {
-    display: flex;
-    flex-direction: column; /* Empile les liens verticalement */
-    gap: 10px; /* Espacement entre les liens */
-    align-items: flex-start; /* Aligne les éléments à gauche */
-}
 
-.portfolio-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
+
+
+
 
 .portfolio-link:hover {
+    background: url('backs.png') no-repeat center center fixed;
     background-color: #f0f0f0;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-link img {
+    background: url('backs.png') no-repeat center center fixed;
     width: 30px;
     height: auto;
     margin-right: 10px;
@@ -166,7 +301,7 @@ section {
 }
 /* Style du footer */
 .footer {
-    background-color: #470330; /* Couleur de fond du footer */
+    background-color: #1b171a; /* Couleur de fond du footer */
     padding: 20px 0; /* Espacement interne */
     text-align: center; /* Centrer le texte */
     color: #fff; /* Couleur du texte */
@@ -212,7 +347,9 @@ section {
 <body>
        
     
-    <!-- Barre de navigation -->
+  
+    
+    
     <nav class="navbar">
         <ul class="navbar-menu">
             <li><a href="#profile">Profil</a></li>
@@ -224,92 +361,119 @@ section {
     <!-- Photo de profil -->
     <section id="profile">
         <div class="profile-container">
-            <!-- Contenu principal à gauche -->
             <div class="profile-info">
-                <h2>Celia Sadeg</h2>
-                <h1>Apprentie Développeuse Web</h1>
-            </div>
-            
-            <!-- Photo de profil à droite -->
-            <div class="picture">
-                <img src="im.jpg" alt="Your Photo">
+                <h2>Je m'appelle <span>SADEG CELIA</span></h2>
+                <h2>Apprentie Développeuse Web</h2>
+               
             </div>
         </div>
     </section>
     
+    
+    
     <!-- Sections -->
     <section id="about">
-        <div class="about-container">
+        <div class="skills-container">
             <!-- Bloc Contact -->
             <div class="contact-info">
-                <!-- Lien Email -->
-                <a href="mailto:sadeg.celia.pro@gmail.com" class="contact-link">
-                    <img src="gmail.png" alt="Gmail">
-                    <span>sadeg.celia.pro@gmail.com</span>
-                </a>
-                <!-- Lien Téléphone -->
-                <a href="tel:0751205298" class="contact-link">
-                    <img src="tel.png" alt="Téléphone">
-                    <span>0751205298</span>
-                </a>
-                <!-- Lien LinkedIn -->
-                <a href="https://www.linkedin.com/in/celia-sadeg-6022b82b5/" target="_blank" class="contact-link">
-                    <img src="linkedin1.png" alt="LinkedIn">
-                    <span>LinkedIn</span>
-                </a>
+               
+                    <!-- Lien Email -->
+                    <a href="mailto:sadeg.celia.pro@gmail.com" class="contact-link">
+                        <img src="gmail.png" alt="Gmail">
+                        <span>sadeg.celia.pro@gmail.com</span>
+                    </a>
+                
+                    <!-- Lien Téléphone -->
+                    <a href="tel:0751205298" class="contact-link">
+                        <img src="tel.png" alt="Téléphone">
+                        <span>0751205298</span>
+                    </a>
+                
+                    <!-- Lien LinkedIn -->
+                    <a href="https://www.linkedin.com/in/celia-sadeg-6022b82b5/" target="_blank" class="contact-link">
+                        <img src="linkedin1.png" alt="LinkedIn">
+                        
+                    </a>
+                    <a href="https://github.com/Celia-Sadeg" target="_blank" class="contact-link">
+                        <img src="tg.png" alt="GitHub">
+                        
+                    </a>
+                    
+                </div>
             </div>
-
             <div class="about-section">
                 <h2>À propos</h2>
                 <p>
                     Actuellement en troisième année du cycle ingénieur à l'ESIEA, grande école d'ingénieurs, je recherche un contrat d'alternance. Passionnée, organisée et autodidacte, 
-                    j'aime apprendre de nouvelles technologies et relever des défis. Motivé et créatif, je suis prête à contribuer à vos projets et à collaborer avec des professionnels du secteur.
-                    
+                    j'aime apprendre de nouvelles technologies et relever des défis. Motivée et créative, je suis prête à contribuer à vos projets et à collaborer avec des professionnels du secteur.
                 </p>
+                <div class="cv">
+                    <!--<a href="cv.pdf" target="_blank">Mon CV</a>-->
+                    <a href="certifications.html">Mes certifications</a>
+                </div>
+            
+               
+            
                 
             </div>
+           
+            
+            
+
+            <!-- Groupe: <a href="mailto:sadeg.celia.pro@gmail.com">Email</a></li> Bases de données --> 
             
         </div>
+        
     </section>
+     <!-- Ajout de bulles animées -->
+     <div class="bubble" style="left: 10%;"></div>
+     <div class="bubble" style="left: 20%;"></div>
+     <div class="bubble" style="left: 30%;"></div>
+     <div class="bubble" style="left: 40%;"></div>
+     <div class="bubble" style="left: 50%;"></div>
+        <!-- Ajout de bulles animées -->
+        
 
-    <section id="projects">
+   
+            
+           
+            
+        
+    <section id="about">
         <h2>Projets</h2>
         <div class="projects-container">
-
+    
             <div class="project-card">
-                <img src="todo.png" alt="Image du projet 3" class="project-image">
-                <h3> To-Do Liste</h3>
+                <img src="todo.png" alt="Image du projet To-Do Liste" class="project-image">
+                <h3>To-Do Liste</h3>
                 <p>Création d'une application pour gérer des tâches avec la possibilité d'ajouter, supprimer et marquer les tâches comme complètes.</p>
                 <a href="TO-DO/todo.html" class="project-link">Tester!</a>
             </div>
+    
             <div class="project-card">
-                <img src="hhh.png" alt="Image du projet 2" class="project-image">
+                <img src="hhh.png" alt="Image du projet Jeu de Bataille" class="project-image">
                 <h3>Jeu de Bataille</h3>
                 <p>Développement d'un jeu de cartes avec des règles simples.</p>
                 <a href="bataille/index.html" class="project-link">Tester!</a>
             </div>
-           
-            
-            
-            
+    
             <div class="project-card">
-                <img src="calcul.png" alt="Image du projet 2" class="project-image">
+                <img src="calcul.png" alt="Image du projet Calculatrice" class="project-image">
                 <h3>Calculatrice</h3>
                 <p>Développement d'une calculatrice fonctionnelle avec des opérations de base, permettant d'effectuer des calculs simples.</p>
                 <a href="calcul.html" class="project-link">Tester!</a>
             </div>
-            
+    
             <div class="project-card">
-                <img src="i.png" alt="Image du projet 2" class="project-image">
+                <img src="i.png" alt="Image du projet Quiz" class="project-image">
                 <h3>Quiz</h3>
-                <p>Développement d'un Quiz.</p>
+                <p>Développement d'un Quiz interactif.</p>
                 <a href="quiz/index.html" class="project-link">Tester!</a>
             </div>
-            
-           
-            
+    
         </div>
     </section>
+    
 
     <section id="skills">
         <h2>Compétences</h2>
@@ -384,6 +548,12 @@ section {
             </div>
         </div>
     </section>
+    <div class="bubble" style="left: 9%;"></div>
+    <div class="bubble" style="left: 6%;"></div>
+    <div class="bubble" style="left: 70%;"></div>
+    <div class="bubble" style="left: 20%;"></div>
+    <div class="bubble" style="left: 33%;"></div>
+    <div class="bubble" style="left: 9%;"></div>
     
      <!-- Footer; git add .;git commit -m "Message";git push --set-upstream origin main -->
         <footer class="footer">
@@ -398,11 +568,7 @@ section {
            
         </footer>
     
-    <!-- Ajout de bulles animées -->
-    <div class="bubble" style="left: 10%;"></div>
-    <div class="bubble" style="left: 20%;"></div>
-    <div class="bubble" style="left: 30%;"></div>
-    <div class="bubble" style="left: 40%;"></div>
-    <div class="bubble" style="left: 50%;"></div>
+
+    
 </body>
 </html>
