@@ -8,6 +8,8 @@
     
     <style>
     .about-section {
+    max-width: 600px;
+    margin: 0 auto;
     font-size: 40px; /* Plus grand */
     line-height: 1.8; /* Ajuste l'espacement pour une meilleure lisibilité */
     max-width: 600px;  /* Limite la largeur de la section pour une meilleure lisibilité */
@@ -18,7 +20,7 @@
     padding: 70px;  /* Ajoute de l'espace interne pour respirer */
     background: url('backs.png') no-repeat center center fixed;
     border-radius: 10px;  /* Coins légèrement arrondis pour une apparence moderne */
-    box-shadow: 0 4px 20px rgb(240, 245, 240);  /* Ombre douce pour un effet de profondeur */
+    box-shadow: 0 4px 40px rgb(240, 245, 240);  /* Ombre douce pour un effet de profondeur */
     opacity: 0;  /* Initialement transparent pour l'animation d'apparition */
     transform: translateY(20px);  /* Positionne la section légèrement en dehors de la vue pour l'animation */
     transition: all 0.5s ease-in-out;  /* Transition douce pour tous les éléments */
@@ -68,7 +70,7 @@
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    background: #5a13309c; /* Gris */
+    background: #b40652; /* Gris */
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -245,14 +247,32 @@ section {
 
 
 .about-section p {
-    font-family: 'Arial', sans-serif;  /* Même police pour une cohérence */
-    font-size: 25px;  /* Taille de la police pour le texte */
-    line-height: 1.6;  /* Espace entre les lignes pour une meilleure lisibilité */
-    color: #f4f1f1;  /* Couleur du texte */
-    text-align: justify;  /* Justifie le texte pour un look propre */
-    opacity: 0;  /* Initialement transparent pour l'animation */
-    animation: fadeInUp 1s 0.5s forwards;  /* Animation d'apparition avec délai pour un effet progressif */
+    font-family: 'Arial', sans-serif; /* Police cohérente */
+    font-size: 23px; /* Taille par défaut pour les grands écrans */
+    line-height: 1.6; /* Espace entre les lignes */
+    color: #f4f1f1; /* Couleur du texte */
+    text-align: justify; /* Justifie le texte */
+    opacity: 0; /* Initialement transparent */
+    animation: fadeInUp 1s 0.5s forwards; /* Animation d'apparition */
+    hyphens: auto; /* Active la césure automatique */
+    word-wrap: break-word; /* Empêche les débordements de mots longs */
 }
+
+@media (max-width: 768px) { /* Pour les tablettes ou écrans intermédiaires */
+    .about-section p {
+        font-size: 18px; /* Réduction de la taille de la police */
+        line-height: 1.4; /* Ajustement de l'espacement entre les lignes */
+    }
+}
+
+@media (max-width: 480px) { /* Pour les téléphones */
+    .about-section p {
+        font-size: 16px; /* Taille adaptée aux téléphones */
+        line-height: 1.3; /* Espacement réduit pour les écrans étroits */
+        text-align: left; /* Désactivation de la justification pour éviter les grands espaces */
+    }
+}
+
 /* Conteneur principal pour "À propos" et les liens */
 .about-container {
     display: flex;

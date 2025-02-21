@@ -464,7 +464,7 @@ h3 {
 
 /* Ajustements pour les bulles paires */
 .bubble:nth-child(even) {
-    background-color: rgba(92, 57, 156, 0.2);
+    background-color: rgba(214, 195, 214, 0.37);
     animation-duration: 12s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet de rebond */
 }
