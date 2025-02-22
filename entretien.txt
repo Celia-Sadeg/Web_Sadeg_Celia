@@ -1004,3 +1004,20 @@ Matera réinvente la gestion des copropriétés avec des solutions sur-mesure, p
 La copropriété, régie par la loi du 10 juillet 1965, est un système où plusieurs personnes partagent la propriété d’un immeuble,
  avec des parties privatives (comme un appartement) et des parties communes (comme les couloirs). 
 Chaque copropriétaire a des droits et obligations, et la gestion est assurée par un syndic, choisi lors d’assemblées générales.
+
+
+
+
+********************************
+ <section id="about">
+        <h2>Projets</h2>
+        <div class="cv">
+            <!-- Lien vers le projet Design Sprint -->
+            <p>Projet Design Sprint :</p>
+            <p>Designer UX/UI avec Figma. Maquettage d’une application avant le codage dans le cadre d’un projet Design Sprint.</p>
+            <a href="https://www.figma.com/proto/m55aTELjFV144ChSYsSd6h/Projet-Design-Sprint?node-id=34-1868&t=Oc60PMeJhSp4HqKt-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=121%3A8491" 
+               target="_blank" style="text-decoration: underline; color: rgb(242, 242, 246);">
+                Voir le projet sur Figma
+            </a>
+        </div>
+    </section>

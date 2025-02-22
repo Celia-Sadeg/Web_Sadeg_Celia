@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="f.css">
     
     <style>
+    /* Styles par défaut */
+#profile {
+    padding: 70px;
+}
+
+
+
+
+
+/* Styles pour les écrans de téléphone */
+@media (max-width: 600px) {
+    .profile-info h2 {
+        font-size: 0.8rem; /* Réduire la taille de la police pour mobile */
+    }
+
+    .profile-container {
+        padding: 10px; /* Réduire le padding */
+    }
+}
+
     .about-section {
     max-width: 600px;
     margin: 0 auto;
@@ -384,7 +404,8 @@ section {
         <div class="profile-container">
             <div class="profile-info">
                 <h2>Je m'appelle <span>SADEG CELIA</span></h2>
-                <h2>Apprentie Développeuse Web</h2>
+                <h2>Apprentie Ingénieure Informatique</h2>
+                
                
             </div>
         </div>
@@ -502,6 +523,9 @@ section {
     
         </div>
     </section>
+   
+    
+    
     
 
     <section id="skills">
