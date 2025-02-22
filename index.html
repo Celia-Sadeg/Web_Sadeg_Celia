@@ -93,13 +93,23 @@
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    background: #b40652; /* Gris */
+    background: #b9135e; /* Couleur de fond */
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin: 10px;
 }
+
+/* Styles pour les écrans de téléphone */
+@media (max-width: 600px) {
+    .cv a {
+        padding: 10px 20px; /* Réduire le padding */
+        font-size: 14px;   /* Réduire la taille de la police */
+        margin: 5px;       /* Réduire les marges */
+    }
+}
+
 
 /* Effet au survol */
 .cv a:hover {
