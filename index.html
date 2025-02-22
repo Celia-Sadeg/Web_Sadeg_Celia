@@ -8,24 +8,27 @@
     
     <style>
     /* Styles par défaut */
-#profile {
+    #profile {
     padding: 70px;
 }
 
-
-
-
+/* Empêcher les sauts de ligne dans les balises h2 */
+.profile-info h2 {
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
 
 /* Styles pour les écrans de téléphone */
 @media (max-width: 600px) {
     .profile-info h2 {
         font-size: 0.8rem; /* Réduire la taille de la police pour mobile */
+        white-space: nowrap; /* Appliquer également sur mobile */
     }
 
     .profile-container {
         padding: 10px; /* Réduire le padding */
     }
 }
+
 
     .about-section {
     max-width: 600px;
