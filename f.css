@@ -386,43 +386,6 @@ h3 {
     color: #333;
     margin: 10px 0;
 }
-
-
-
-.bubble {
-    position: absolute;
-    bottom: -150px;
-    width: 80px;
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: rise 10s infinite ease-in;
-    opacity: 0.6;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.bubble {
-    position: absolute;
-    bottom: -150px;
-    width: 80px;
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: rise 10s infinite ease-in;
-    opacity: 0.6;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 /* Bulle animée */
 .bubble {
     position: absolute;
@@ -457,14 +420,14 @@ h3 {
 
 /* Ajustements pour les bulles impaires */
 .bubble:nth-child(odd) {
-    background-color: rgba(242, 17, 171, 0.3);
+    background-color: rgb(255, 10, 177);
     animation-duration: 10s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet de rebond */
 }
 
 /* Ajustements pour les bulles paires */
 .bubble:nth-child(even) {
-    background-color: rgba(214, 195, 214, 0.37);
+    background-color: rgb(255, 204, 0);
     animation-duration: 12s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet de rebond */
 }
