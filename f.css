@@ -210,12 +210,23 @@ body {
     display: block;
     margin: 0 1rem 1rem;
     padding: 0.5rem;
-    background-color: #24f60d;
+   
     color: #fff;
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
+   
+    
+    /* Effet lumineux permanent */
+    box-shadow: 0 0 10px #15151b, 0 0 20px #292938, 0 0 30px #e5e6e9;
 }
+
+
+
+.project-card .project-link {
+    animation: glowing 1.5s infinite alternate;
+}
+
 
 .project-card .project-link:hover {
     background-color: #7c3aed;
