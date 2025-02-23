@@ -24,7 +24,7 @@
 /* Styles pour les écrans de téléphone */
 @media (max-width: 600px) {
     .profile-info h2 {
-        font-size: 1.2rem; /* Réduire la taille de la police pour mobile */
+        font-size: 1.1rem; /* Réduire la taille de la police pour mobile */
         white-space: nowrap; /* Appliquer également sur mobile */
     }
 
@@ -34,25 +34,40 @@
 }
 
 
-    .about-section {
+.about-section {
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    font-size: 40px; /* Plus grand */
-    line-height: 1.8; /* Ajuste l'espacement pour une meilleure lisibilité */
-    max-width: 600px;  /* Limite la largeur de la section pour une meilleure lisibilité */
-    position: relative;
-    top: -50px; /* Remonte encore plus haut */
-    left: 50px; /* Déplace légèrement vers la droite */
-    margin: 0 auto; /* Centre horizontalement */
-    padding: 70px;  /* Ajoute de l'espace interne pour respirer */
+    font-size: 40px;
+    line-height: 1.8;
+    padding: 70px;
     background: url('backs.png') no-repeat center center fixed;
-    border-radius: 10px;  /* Coins légèrement arrondis pour une apparence moderne */
-    box-shadow: 0 4px 40px rgb(253, 252, 253);  /* Ombre douce pour un effet de profondeur */
-    opacity: 0;  /* Initialement transparent pour l'animation d'apparition */
-    transform: translateY(20px);  /* Positionne la section légèrement en dehors de la vue pour l'animation */
-    transition: all 0.5s ease-in-out;  /* Transition douce pour tous les éléments */
-    animation: fadeInUp 0.8s forwards;  /* Animation d'apparition vers le haut */
+    border-radius: 10px;
+    box-shadow: 0 4px 40px rgb(253, 252, 253);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    animation: fadeInUp 0.8s forwards;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
+
+body {
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        max-width: 90%; /* Ajuste la largeur pour les petits écrans */
+        padding: 20px; /* Réduit l'espace interne */
+        font-size: 20px; /* Réduit la taille de la police */
+        left: 0; /* Corrige le décalage horizontal */
+        top: 0; /* Corrige le décalage vertical */
+    }
+}
+
 
     .contact-info {
     position: relative;
