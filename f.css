@@ -11,6 +11,12 @@ body {
     line-height: 1.6;
     color: #f0e2f0;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 /* Animation du fond */
 @keyframes gradientShift {
@@ -120,7 +126,7 @@ body {
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 162, 255, 0.4);
+    box-shadow: 0 0 15px rgba(189, 36, 138, 0.4);
 }
 
 /* Image des projets */
@@ -134,7 +140,7 @@ body {
 .project-card h3 {
     margin-top: 10px;
     font-size: 1.4rem;
-    color: #a3bffa;
+    color: #f4f5f6;
 }
 
 /* Description du projet */
@@ -210,7 +216,7 @@ body {
     display: block;
     margin: 0 1rem 1rem;
     padding: 0.5rem;
-    background-color: #8b5cf6;
+    background-color: #a3145e;
     color: #fff;
     text-align: center;
     border-radius: 5px;
