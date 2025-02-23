@@ -35,8 +35,8 @@
 
 
 .about-section {
-    width: 100%;
     max-width: 600px;
+    top: -80px;
     margin: 0 auto;
     font-size: 40px;
     line-height: 1.8;
@@ -48,11 +48,13 @@
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
     animation: fadeInUp 0.8s forwards;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+
+    hyphens: none; /* Empêche les césures automatiques */
+    word-break: break-word; /* Retour à la ligne sans couper les mots */
+    overflow-wrap: break-word; /* Assure une compatibilité avec les navigateurs modernes */
+    white-space: normal; /* Reviens à une mise en page normale */
 }
+
 
 body {
     overflow-x: hidden; /* Empêche les débordements horizontaux */
@@ -381,47 +383,38 @@ section {
     font-size: 16px;
     font-weight: bold;
 }
-/* Style du footer */
 .footer {
-    background-color: #1b171a; /* Couleur de fond du footer */
-    padding: 20px 0; /* Espacement interne */
-    text-align: center; /* Centrer le texte */
-    color: #fff; /* Couleur du texte */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement les éléments */
+    align-items: center; /* Centrer verticalement */
+    background: linear-gradient(90deg, #97025c, #7873f5); /* Dégradé lumineux */
+    color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Effet lumineux */
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
 }
 
-.footer-content {
-    max-width: 1000px; /* Largeur maximale du contenu */
-    margin: 0 auto; /* Centre le contenu horizontalement */
+.footer a {
+    margin: 0 15px; /* Espacement entre les liens */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #130a62; /* Couleur de survol */
 }
 
 .footer p {
-    margin: 0; /* Supprime les marges par défaut */
-    font-size: 14px; /* Taille du texte */
+    margin-right: 30px; /* Espacement entre le texte et les liens */
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
 }
 
-.footer-links {
-    list-style-type: none; /* Supprime les puces */
-    padding: 0; /* Supprime les marges internes */
-    margin-top: 10px; /* Espace au-dessus des liens */
-}
+/* Style du footer */
 
-.footer-links li {
-    display: inline; /* Affiche les liens sur une seule ligne */
-    margin: 0 10px; /* Espace entre les liens */
-}
-
-.footer-links a {
-    color: #fff; /* Couleur des liens */
-    text-decoration: none; /* Supprime le soulignement */
-    transition: color 0.3s; /* Animation de la couleur */
-}
-
-.footer-links a:hover {
-    color: #ddd; /* Couleur des liens au survol */
-}
 #skills {
     
     scroll-margin-top: 80px; /* Ajuste selon la hauteur de ta navbar */
@@ -656,17 +649,14 @@ section {
     <div class="bubble" style="left: 9%;"></div>
     
      <!-- Footer; git add .;git commit -m "Message";git push --set-upstream origin main -->
+     
         <footer class="footer">
-            <div class="footer-content">
-                <p>&copy;  Celia Sadeg.</p>
-                <ul class="footer-links">
-                    <li><a href="https://github.com/Celia-Sadeg" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/celia-sadeg-6022b82b5/" target="_blank">LinkedIn</a></li>
-                    <li><a href="mailto:sadeg.celia.pro@gmail.com">Email</a></li>
-                </ul>
-            </div>
-           
+            <p>© Celia Sadeg.</p>
+            <a href="https://github.com/Celia-Sadeg" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/celia-sadeg-6022b82b5/" target="_blank">LinkedIn</a>
+            <a href="mailto:sadeg.celia.pro@gmail.com">Email</a>
         </footer>
+        
     
 
     
