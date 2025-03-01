@@ -17,6 +17,47 @@
     </script>
     
     <style>
+        .styled-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #00FFFF; /* Bleu cyan */
+    background: linear-gradient(45deg, #00ffff, #0088ff);
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.styled-link:hover {
+    background: linear-gradient(45deg, #0088ff, #00ffff);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.styled-link::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.styled-link:hover::before {
+    opacity: 1;
+}
+
+.styled-link:active {
+    transform: scale(0.9);
+}
+
         
         
     /* Styles par défaut */
@@ -569,6 +610,13 @@ section {
                 <p>Développement d'une calculatrice fonctionnelle avec des opérations de base, permettant d'effectuer des calculs simples.</p>
                 <a href="calcul.html" class="project-link">Tester!</a>
             </div>
+            <a href="https://celia-sadeg.github.io/Projet_ReactJs/" class="styled-link" target="_blank" rel="noopener noreferrer">
+                https://celia-sadeg.github.io/Projet_ReactJs/
+            </a>
+            
+            
+            
+
     
            
     
@@ -667,7 +715,7 @@ section {
      
         <footer class="footer">
            
-            <p>©  2024 Celia Sadeg - Tous droits réservés. Reproduction interdite sans autorisation.</p>
+            <p>©  2024 Celia Sadeg - Tous droits réservés.</p>
             
             
             <a href="https://github.com/Celia-Sadeg" target="_blank">GitHub</a>

@@ -1,68 +1,490 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* 🌌 Arrière-plan animé futuriste */
 body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1c1e26, #3c4049);
+  color: white;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  animation: backgroundAnimation 10s infinite alternate;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@keyframes backgroundAnimation {
+  0% { background: linear-gradient(135deg, #1c1e26, #3c4049); }
+  100% { background: linear-gradient(135deg, #282c36, #4a4f5d); }
+}
+/* 🌟 Forcer la page à occuper tout l'écran */
+body, html {
+  height: 100vh;
+  overflow-y: auto; /* ✅ Permettre un léger scroll si nécessaire */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 📌 Ajustement du conteneur principal */
+.budget-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ Répartir les éléments */
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+
+/* 📊 Ajustement du graphique pour ne pas prendre trop d’espace */
+.chart-container {
+  flex: 1;
+  max-height: 70%;
+}
+
+/* 📋 Ajustement du formulaire et des boutons */
+.transactions-section {
+  flex: 1;
+  max-height: 40%;
+  overflow-y: auto; /* ✅ Permet un scroll interne si besoin */
+}
+
+/* 📋 Conteneur du formulaire */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* Espacement entre les éléments */
+  width: 90%;
+  max-width: 600px; /* Ajuste la taille */
+  margin: auto;
+}
+
+/* 🎨 Champs de saisie */
+.form-container input,
+.form-container select {
+  flex: 1; /* Permet aux champs de prendre tout l'espace disponible */
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+}
+
+/* 🚀 Bouton Ajouter */
+.form-container button {
+  background: #ff9800;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #e68900;
+}
+
+
+/* 🌟 Titres avec effet de néon */
+h1, h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+}
+
+/* ✅ Conteneur principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🌟 Navbar */
+.navbar {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+/* 📊 Conteneur du graphique */
+.chart-container {
+  width: 100%;
+  max-width: 500px; /* Augmenter la largeur max */
+  min-height: 400px; /* Augmenter la hauteur */
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+  margin: auto;
+}
+
+/* ✅ Ajustement pour mobile */
+@media (max-width: 768px) {
+  .chart-container {
+    max-width: 90%;
+    min-height: 350px;
+  }
+}
+
+
+/* 📊 Conteneur du graphique */
+.chart-container {
+  width: 100%;
+  max-width: 400px;
+  min-height: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+  margin: auto;
+}
+
+/* 📊 Ajustement des graphiques sur mobile */
+@media (max-width: 768px) {
+  .chart-container {
+    max-width: 90%;
+    min-height: 250px;
+  }
+}
+
+/* 🎇 Animation d'entrée des cartes */
+.image-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎨 Grille d'images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  justify-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* 🚀 Effet futuriste sur les boutons */
+button {
+  background: linear-gradient(45deg, #ff8c00, #ff0080);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(255, 140, 0, 0.5);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 30px rgba(255, 140, 0, 0.8);
+}
+
+/* 💎 Champs de saisie futuristes */
+input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+}
+
+/* 🛍️ Style du panier */
+.cart-container {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.5);
+  text-align: center;
+}
+
+/* 🎨 Budget - Conteneur principal */
+.budget-container {
+  text-align: center;
+  background: #1e1f26;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 📋 Formulaire d'ajout de transaction */
+.add-transaction input, .add-transaction select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  width: 80%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.add-transaction button {
+  background: #ff9800;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-transaction button:hover {
+  background: #e68900;
+}
+
+/* 📜 Liste des transactions */
+.transactions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.transactions-list .income {
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.transactions-list .expense {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+/* 📊 Boutons Revenu/Dépense */
+.type-selector {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.type-selector button.selected {
+  background: #4CAF50; /* Vert pour revenu */
+  color: white;
+  box-shadow: 0px 0px 10px rgba(76, 175, 80, 0.8);
+}
+
+.type-selector button:nth-child(2) {
+  background: #FF5733; /* Rouge pour dépense */
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .budget-container, .chart-container, .transactions-section {
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+/* 🌟 Conteneur principal en 2 colonnes */
+.budget-container {
+  display: flex; /* Active le mode colonne */
+  justify-content: space-between; /* Sépare en 2 parties */
+  align-items: center; /* Aligne les éléments au centre */
+  width: 90%;
+  max-width: 1000px; /* Ajuste la largeur */
+  margin: auto;
+  background: #1e1f26;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 📊 Ajustement du graphique */
+.chart-container {
+  width: 50%; /* Prend 50% de la largeur */
+  min-height: 320px;
+}
+
+/* 📋 Partie texte du budget */
+.budget-text {
+  width: 50%; /* Prend 50% de la largeur */
+  text-align: center;
+}
+/* 🌟 Ajustement du budget en mode desktop */
+.budget-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  background: #1e1f26;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 📋 Partie texte à gauche */
+.budget-text {
+  width: 50%;
+  text-align: left; /* Aligner à gauche pour un meilleur rendu */
+}
+
+/* 📊 Graphique à droite */
+.chart-container {
+  width: 50%;
+  min-height: 320px;
+}
+
+/* ✅ Ajustement pour mobile */
+@media (max-width: 768px) {
+  .budget-container {
+    flex-direction: column; /* Empile le contenu en colonne */
+    text-align: center; /* Centre le texte */
+  }
+
+  .budget-text {
+    width: 100%;
+    text-align: center; /* Centre le texte pour mobile */
+  }
+
+  .chart-container {
+    width: 100%;
+    max-width: 300px; /* Ajuste la taille du graphique */
+  }
+}
+.type-selector {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.type-selector label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.type-selector input {
+  width: 18px;
+  height: 18px;
+  accent-color: #4CAF50; /* Couleur verte pour le bouton sélectionné */
+}
+/* 📌 Réduction des tailles de texte en version mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Réduction du titre principal */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Réduction du sous-titre */
+  }
+
+  .type-selector label {
+    font-size: 1rem; /* Ajustement du texte des labels */
+  }
+
+  button {
+    font-size: 0.9rem; /* Taille des boutons réduite */
+    padding: 8px 15px; /* Ajustement du padding */
+  }
+
+  input, select {
+    font-size: 0.9rem; /* Ajustement des champs de saisie */
+    padding: 8px; /* Réduction du padding */
+  }
+
+  .transactions-list li {
+    font-size: 0.9rem; /* Ajustement des éléments de la liste */
+  }
+}
+.transactions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transactions-list li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  margin: 10px 0; /* ✅ Ajoute un espace entre les transactions */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* ✅ Met chaque élément sur une nouvelle ligne */
+  align-items: flex-start;
+}
+
+.transaction-date {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 4px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  margin-top: 8px; /* ✅ Espacement entre le bouton et la transaction */
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background: darkred;
 }
